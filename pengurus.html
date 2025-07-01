@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Pengurus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Data Pengurus</h1>
+  <table id="tabel-pengurus">
+    <thead>
+      <tr><th>Nama</th><th>Jabatan</th><th>Alamat</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="js/data.js"></script>
+  <script>
+    const tbody = document.querySelector("tbody");
+    pengurus.forEach(p => {
+      const tr = `<tr><td>${p.nama}</td><td>${p.jabatan}</td><td>${p.alamat}</td></tr>`;
+      tbody.innerHTML += tr;
+    });
+  </script>
+</body>
+</html>
